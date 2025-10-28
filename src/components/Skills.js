@@ -3,13 +3,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   Code, 
-  Database, 
-  Palette, 
-  Smartphone, 
   Zap,
   Brain,
-  GitBranch,
-  Globe
+  GitBranch
 } from 'lucide-react';
 import './Skills.css';
 
