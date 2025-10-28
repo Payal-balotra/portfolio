@@ -59,7 +59,7 @@ const Projects = () => {
       technologies: ["React", "Node.js", "MongoDB", "JavaScript", "CSS"],
       category: "mini",
       github: "https://github.com/Payal-balotra/paste-app",
-      live: "https://project-2-five-neon.vercel.app/",
+      live: "https://portfolio-psi-seven-72.vercel.app/",
       features: [
         "Create, update, delete, view, and search notes",
         "Clean, user-friendly interface",
