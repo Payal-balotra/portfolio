@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  ExternalLink, 
-  Github
+import {
+  ExternalLink,
+  Github,
+  Zap
 } from 'lucide-react';
-import './Projects.css';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -18,254 +18,168 @@ const Projects = () => {
   const projects = [
     {
       id: 100,
-      title: "SpendSense – Finance Analytics Platform",
-      description: "A full-stack financial management system to securely track income and expenses with interactive analytics dashboards, time-based summaries, and export features.",
-      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Charts"],
+      title: "WalletIQ – AI Expense Manager",
+      description: "A smart financial ecosystem that leverages AI to categorize expenses, forecast budget trends, and provide authorized financial insights.",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&q=80",
+      technologies: ["React", "Redux", "Node.js", "AI Integration", "MongoDB", "Socket.io"],
       category: "featured",
       github: "https://github.com/Payal-balotra",
       live: "https://expense-tracker-7o1q.vercel.app/",
       features: [
-        "Secure JWT authentication with protected routes",
-        "Interactive analytics using MongoDB aggregations (Pie, Bar, Line)",
-        "Time-based summaries (last 30/60 days)",
-        "Income/Expense CRUD with category-wise tracking",
-        "Receipt and profile image uploads",
-        "Excel export for reports",
-        "Responsive, modern UI"
+        "🤖 AI-driven expense categorization & analysis",
+        "📊 Dynamic charts & financial forecasting",
+        "🔐 Secure JWT Auth integration",
+        "📱 Fully responsive dashboard"
       ]
     },
     {
       id: 101,
-      title: "BlogSphere – Blogging Platform (React, Node.js, MongoDB)",
-      description: "A full-stack blogging platform where users can create, view, and manage posts with clean routing and a reader-friendly UI.",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Routing"],
+      title: "BlogSphere – Modern Publishing",
+      description: "A robust content management platform featuring rich text editing, user profiles, and seamless content delivery.",
+      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80",
+      technologies: ["MERN Stack", "RESTful API", "Tailwind CSS"],
       category: "featured",
       github: "https://github.com/Payal-balotra",
       live: "#",
       features: [
-        "Create, read, and manage blog posts",
-        "Organized routing and clean UI",
-        "Responsive design for great reading experience",
-        "Deployed-ready MERN structure"
+        "📝 Rich text editor integration",
+        "👤 User profiles & role management",
+        "🚀 Optimized performance scoring",
       ]
     },
     {
       id: 6,
-      title: "QuickNotes – Clipboard Notes Manager (React, Node.js, MongoDB)",
-      description: "A quick notes manager to create, update, delete, view, and search notes with a clean, fast UI.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "JavaScript", "CSS"],
+      title: "QuickNotes",
+      description: "A lightning-fast note-taking application designed for efficiency and ease of use.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+      technologies: ["React", "Local Storage", "Search Algorithms"],
       category: "mini",
       github: "https://github.com/Payal-balotra/paste-app",
       live: "https://portfolio-psi-seven-72.vercel.app/",
-      features: [
-        "Create, update, delete, view, and search notes",
-        "Clean, user-friendly interface",
-        "Deployed on Vercel"
-      ]
+      features: ["Search & Filter", "Auto-save", "Dark mode support"]
     },
     {
       id: 1,
       title: "Amazon Clone",
-      description: "A full-featured e-commerce platform with shopping cart, order tracking, product search, and user authentication.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "JavaScript", "CSS", "HTML", "MERN Stack"],
+      description: "A full-featured e-commerce platform with shopping cart, order tracking, and user auth.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      technologies: ["React", "Context API", "Firebase"],
       category: "mini",
       github: "https://github.com/Payal-balotra",
       live: "https://projectama.netlify.app/",
-      features: [
-        "Shopping Cart Functionality",
-        "Order Placement & Tracking",
-        "Product Search & Filtering",
-        "User Authentication",
-        "Responsive Design",
-        "Deployed on Netlify"
-      ]
-    },
-    {
-      id: 2,
-      title: "Calculator App",
-      description: "A modern calculator with advanced mathematical functions and clean UI design.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      category: "mini",
-      github: "https://github.com/Payal-balotra",
-      live: "#",
-      features: [
-        "Basic Arithmetic Operations",
-        "Advanced Functions",
-        "Clean UI Design",
-        "Responsive Layout"
-      ]
-    },
-    {
-      id: 3,
-      title: "To-Do List Manager",
-      description: "A comprehensive task management application with CRUD operations and local storage.",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=300&fit=crop",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      category: "mini",
-      github: "https://github.com/Payal-balotra",
-      live: "#",
-      features: [
-        "Add/Edit/Delete Tasks",
-        "Mark as Complete",
-        "Local Storage",
-        "Filter Tasks"
-      ]
-    },
-    {
-      id: 4,
-      title: "Stone Paper Scissors",
-      description: "An interactive game with score tracking and animated gameplay.",
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&h=300&fit=crop",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      category: "mini",
-      github: "https://github.com/Payal-balotra",
-      live: "#",
-      features: [
-        "Interactive Gameplay",
-        "Score Tracking",
-        "Animated UI",
-        "Sound Effects"
-      ]
-    },
-    
+      features: ["Cart logic", "Order history", "Stripe integration mockup"]
+    }
   ];
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'featured', label: 'Featured' },
-    { id: 'mini', label: 'Mini Projects' }
+    { id: 'featured', label: 'Featured Apps' },
+    { id: 'mini', label: 'Mini Tools' }
   ];
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     activeFilter === 'all' ? true : project.category === activeFilter
   );
 
   return (
-    <section id="projects" className="projects">
-      <div className="container">
+    <section id="projects" className="py-24 bg-darker overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           ref={ref}
-          className={`section-header ${inView ? 'visible' : ''}`}
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">
-            A showcase of my recent work, demonstrating my skills in frontend development and problem-solving
+          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-4">Featured Projects</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            Showcasing innovative web solutions and AI-powered applications.
           </p>
         </motion.div>
 
-        <motion.div 
-          className="project-filters"
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           {filters.map((filter) => (
-            <motion.button
+            <button
               key={filter.id}
-              className={`filter-btn ${activeFilter === filter.id ? 'active' : ''}`}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${activeFilter === filter.id
+                ? 'bg-primary text-white shadow-lg shadow-primary/30 scale-105'
+                : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                }`}
               onClick={() => setActiveFilter(filter.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               {filter.label}
-            </motion.button>
+            </button>
           ))}
         </motion.div>
 
-        <motion.div 
-          className="projects-grid"
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12"
           layout
         >
-          {filteredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              className="project-card"
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.4 + index * 0.1, duration: 0.8 }}
-              layout
-              whileHover={{ y: -10 }}
-            >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-links">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
+          <AnimatePresence>
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className="group relative bg-dark/40 border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                layout
+                whileHover={{ y: -10 }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-darker to-transparent z-10 opactiy-60" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 right-4 z-20 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                    <a href={project.github} target="_blank" rel="noreferrer" className="p-2 bg-darker/80 backdrop-blur-md rounded-full text-white hover:text-primary transition-colors">
                       <Github size={20} />
-                    </motion.a>
-                    <motion.a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
+                    </a>
+                    <a href={project.live} target="_blank" rel="noreferrer" className="p-2 bg-darker/80 backdrop-blur-md rounded-full text-white hover:text-primary transition-colors">
                       <ExternalLink size={20} />
-                    </motion.a>
+                    </a>
                   </div>
                 </div>
-              </div>
-              
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="project-features">
-                  <h4>Key Features:</h4>
-                  <ul>
-                    {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
-        <motion.div 
-          className="projects-cta"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-        >
-          <h3>Interested in Working Together?</h3>
-          <p>
-            I'm always open to new opportunities and exciting projects. 
-            Let's discuss how we can bring your ideas to life!
-          </p>
-          <motion.a
-            href="#contact"
-            className="btn btn-primary"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start a Project
-          </motion.a>
+                <div className="p-8">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                    {project.id === 100 && <Zap className="text-yellow-400 fill-yellow-400" size={24} />}
+                  </div>
+
+                  <p className="text-gray-400 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="px-3 py-1 text-xs font-mono rounded-md bg-primary/10 text-primary border border-primary/20">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="space-y-2 border-t border-white/5 pt-4">
+                    {project.features.slice(0, 3).map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-gray-500">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
