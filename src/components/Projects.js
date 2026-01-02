@@ -21,7 +21,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&q=80",
       technologies: ["React", "Redux", "Node.js", "AI Integration", "MongoDB"],
       category: "featured",
-      github: "https://github.com/Payal-balotra",
+      github: "https://github.com/Payal-balotra/ExpenseTracker",
       live: "https://expense-tracker-7o1q.vercel.app/",
       features: [
         "🤖 AI-driven expense categorization & analysis",
@@ -39,7 +39,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80",
       technologies: ["MERN Stack", "RESTful API", "Tailwind CSS"],
       category: "featured",
-      github: "https://github.com/Payal-balotra",
+      github: "https://github.com/Payal-balotra/blogify",
       live: "#",
       features: [
         "📝 Rich text editor integration",
@@ -56,7 +56,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
       technologies: ["React", "Local Storage", "Search Algorithms"],
       category: "mini",
-      github: "https://github.com/Payal-balotra/paste-app",
+      github: "https://github.com/Payal-balotra/Notes-saver",
       live: "https://project-2-five-neon.vercel.app/",
       features: ["Search & Filter", "Update Pastes", "Copy Pastes"],
     },
