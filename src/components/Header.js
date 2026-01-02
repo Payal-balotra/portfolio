@@ -51,7 +51,7 @@ const Header = ({ setView }) => {
           </motion.div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-8">
               {navItems.map((item) => (
                 <motion.li
@@ -85,7 +85,7 @@ const Header = ({ setView }) => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="lg:hidden text-gray-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -98,7 +98,7 @@ const Header = ({ setView }) => {
       {/* Mobile Nav */}
       {isMenuOpen && (
         <motion.div
-          className="md:hidden bg-darker border-t border-gray-800"
+          className="lg:hidden bg-darker border-t border-gray-800"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}

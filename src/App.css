@@ -5,9 +5,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
-    @apply bg-darker text-gray-100 font-sans antialiased;
+    @apply bg-darker text-gray-100 font-sans antialiased overflow-x-hidden;
   }
 }

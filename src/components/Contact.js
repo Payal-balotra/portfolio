@@ -72,7 +72,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-darker/50 border-t border-gray-800">
+    <section id="contact" className="py-24 bg-darker/50 border-t border-gray-800 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           ref={ref}
