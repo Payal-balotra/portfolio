@@ -67,7 +67,7 @@ const Projects = () => {
         "A full-featured e-commerce platform with shopping cart, order tracking.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-      technologies: ["React", "Context API", "Firebase"],
+      technologies: ["JavaScript", "CSS", "LocalStorage"],
       category: "mini",
       github: "https://github.com/Payal-balotra",
       live: "https://projectama.netlify.app/",
